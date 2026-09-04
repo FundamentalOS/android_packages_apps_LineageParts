@@ -5,10 +5,6 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <org.lineageos.lineageparts.widget.WallOfTextPreference
-        android:icon="@drawable/ic_trust"
-        android:summary="@string/trust_onboarding_description" />
-
     <PreferenceCategory android:title="@string/trust_category_features">
 
         <Preference
@@ -36,9 +32,6 @@
             android:entryValues="@array/trust_restrict_usb_values"
             android:defaultValue="0" />
 
-        <lineageos.preference.LineagePartsPreference
-            android:key="lineagestats" />
-
         <ListPreference
             android:key="sms_security_check_limit"
             android:defaultValue="30"
@@ -52,18 +45,14 @@
         android:key="trust_category_warnings"
         android:title="@string/trust_notification_alerts_title">
 
-        <org.lineageos.lineageparts.widget.WallOfTextPreference
-            android:icon="@drawable/ic_info"
-            android:summary="@string/trust_warnings_alerts_intro" />
-
         <SwitchPreferenceCompat
             android:key="trust_warning_selinux"
-            android:summary="@string/trust_warnings_selinux"
+            android:title="@string/trust_warnings_selinux"
             android:defaultValue="true" />
 
         <SwitchPreferenceCompat
             android:key="trust_warning_keys"
-            android:summary="@string/trust_warnings_keys"
+            android:title="@string/trust_warnings_keys"
             android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>
